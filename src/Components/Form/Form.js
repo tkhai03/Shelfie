@@ -3,6 +3,12 @@ import React, {Component} from 'react'
 export default class Form extends Component{
     constructor(){
         super()
+
+        this.state = {
+            name: '',
+            price: 0,
+            imgurl: ''
+        }
     }
 
 
@@ -12,7 +18,12 @@ export default class Form extends Component{
     render(){
         return(
             <div>
-                Form.js
+                Form
+                <input></input>
+                <input></input>
+                <input></input>
+                <button>Cancel</button>
+                <button>Add to Inventory</button>
             </div>
         )
     }

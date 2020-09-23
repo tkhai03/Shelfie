@@ -1,4 +1,5 @@
 import React, {Component} from 'react'
+// import express from 'express'
 
 export default class Form extends Component{
     constructor(){
@@ -11,23 +12,29 @@ export default class Form extends Component{
         }
     }
 
-handleNameChange(e){
-    this.setState({
-        name: e.target.value
-    })
-}
+    // handleChange() {
+    //     this.setState({
+    //         [e.target.value]: e.target.value
+    //     })
+    // }
 
-handlePriceChange(e){
-    this.setState({
-        price: e.target.value
-    })
-}
+// handleNameChange(e){
+//     this.setState({
+//         name: e.target.value
+//     })
+// }
 
-handleImgurlChange(e){
-    this.setState({
-        imgurl: e.target.value
-    })
-}
+// handlePriceChange(e){
+//     this.setState({
+//         price: e.target.value
+//     })
+// }
+
+// handleImgurlChange(e){
+//     this.setState({
+//         imgurl: e.target.value
+//     })
+// }
 
 deleteInput(){
     this.setState({

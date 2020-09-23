@@ -30,9 +30,9 @@ export default class App extends Component {
  render() {
       return (
         <div>
-          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory}/>
+          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory} />
           <Header/>
-          <Form/>
+          <Form getInventory= {this.getInventory} />
         
         </div>
       )

@@ -1,9 +1,10 @@
 import React, {Component} from 'react'
-// import express from 'express'
+import axios from 'axios'
+
 
 export default class Form extends Component{
-    constructor(){
-        super()
+    constructor(props){
+        super(props)
 
         this.state = {
             name: '',
@@ -36,13 +37,13 @@ export default class Form extends Component{
 //     })
 // }
 
-deleteInput(){
-    this.setState({
-        name: '',
-        price: 0,
-        imgurl: ''
-    })
-}
+// deleteInput(){
+//     this.setState({
+//         name: '',
+//         price: 0,
+//         imgurl: ''
+//     })
+// }
 
 handleInventory(){
     
@@ -53,12 +54,19 @@ handleInventory(){
 
         return(
             <div>
-                Form
-                <input placeholder='name' name='name' onChange={e => this.handleNameChange(e)}/>
-                <input placeholder='price' name='price' onChange={e => this.handlePriceChange(e)}/>
-                <input placeholder='img url' name='imgurl' onChange={e => this.handleImgurlChange(e)}/>
-                <button onClick={() => this.deleteInput()}>Cancel</button>
-                <button onClick={() => this.handleInventory()}>Add to Inventory</button>
+                <form className= "form">
+                    <p>Image URL:</p>
+                    <input placeholder='img url' name='imgurl' onChange={e => this.handleImgurlChange(e)}/>
+                    <p>Product Name:</p>
+                    <input placeholder='name' name='name' onChange={e => this.handleNameChange(e)}/>
+                    <p>Price:</p>
+                    <input placeholder='price' name='price' onChange={e => this.handlePriceChange(e)}/>
+                    <div className="form-buttons">
+                        <button className="form-button" onClick={() => this.deleteInput()}>Cancel</button>
+                        <button className="form-button" onClick={() => this.handleInventory()}>Add to Inventory</button>
+                    </div>
+
+                </form>
             </div>
         )
     }

@@ -37,15 +37,19 @@ deleteInput(){
     })
 }
 
+handleInventory(){
+    
+}
+
     render(){
         console.log(this.state)
 
         return(
             <div>
                 Form
-                <input placeholder='name' onChange={e => this.handleNameChange(e)}></input>
-                <input placeholder='price' onChange={e => this.handlePriceChange(e)}></input>
-                <input placeholder='imgurl' onChange={e => this.handleImgurlChange(e)}></input>
+                <input placeholder='name' name='name' onChange={e => this.handleNameChange(e)}/>
+                <input placeholder='price' name='price' onChange={e => this.handlePriceChange(e)}/>
+                <input placeholder='img url' name='imgurl' onChange={e => this.handleImgurlChange(e)}/>
                 <button onClick={() => this.deleteInput()}>Cancel</button>
                 <button onClick={() => this.handleInventory()}>Add to Inventory</button>
             </div>

@@ -1,5 +1,6 @@
 const express = require('express')
 const massive = require('massive')
+const ctrl = require('./controller')
 require('dotenv').config()
 // const Ctrl = require('./server/controller')
 
@@ -17,3 +18,5 @@ massive({
     console.log('DB Ready')
     app.listen(SERVER_PORT, () => console.log(`Providing feedback from ${SERVER_PORT}`))
   })
+
+  app.get('/api/inventory', ctrl.getInventory)

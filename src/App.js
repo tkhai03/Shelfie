@@ -3,7 +3,7 @@ import Dashboard from './Components/Dashboard/Dashboard'
 import Header from './Components/Header/Header'
 import Form from './Components/Form/Form'
 import './App.css'
-import axios from axios
+import axios from 'axios'
 
 
 export default class App extends Component {
@@ -11,7 +11,7 @@ export default class App extends Component {
     super()
 
     this.state = {
-      inventory: []
+      inventory: [],
     }
     this.getInventory = this.getInventory.bind(this)
 
@@ -30,7 +30,7 @@ export default class App extends Component {
  render() {
       return (
         <div>
-          <Dashboard getInventory= {this.getInventory}/>
+          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory}/>
           <Header/>
           <Form/>
         

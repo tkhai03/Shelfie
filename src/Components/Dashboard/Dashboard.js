@@ -6,26 +6,22 @@ import axios from 'axios'
 export default class Dashboard extends Component {
     constructor(props){
         super(props)
-        this.state = {
-            inventory: []
-        }
+
     }
 
-    componentDidMount()
 
-    getInventory() {
-        axios.get('/api/inventory')
-        .then(res => this.setState({inventory: res.data}))
-    }
 
 
 
     render(){
         return(
             <div>
-                {this.state.inventory.map((element) => {
-                    return <Product key={element.id} />
+                {this.props.inventory.map((product, index) => {
+                    return (
+                        <Product product = {product} key = {index}/>
+                    )
                 })}
+                <Product/>
             </div>
         )
     }

@@ -56,11 +56,11 @@ handleInventory(){
             <div>
                 <form className= "form">
                     <p>Image URL:</p>
-                    <input placeholder='img url' name='imgurl' onChange={e => this.handleImgurlChange(e)}/>
+                    <input placeholder='img url' name='imgurl' onChange={e => this.handleChange(e)}/>
                     <p>Product Name:</p>
-                    <input placeholder='name' name='name' onChange={e => this.handleNameChange(e)}/>
+                    <input placeholder='name' name='name' onChange={e => this.handleChange(e)}/>
                     <p>Price:</p>
-                    <input placeholder='price' name='price' onChange={e => this.handlePriceChange(e)}/>
+                    <input placeholder='price' name='price' onChange={e => this.handleChange(e)}/>
                     <div className="form-buttons">
                         <button className="form-button" onClick={() => this.deleteInput()}>Cancel</button>
                         <button className="form-button" onClick={() => this.handleInventory()}>Add to Inventory</button>

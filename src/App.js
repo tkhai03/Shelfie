@@ -2,6 +2,7 @@ import React, { Component } from 'react'
 import Dashboard from './Components/Dashboard/Dashboard'
 import Header from './Components/Header/Header'
 import Form from './Components/Form/Form'
+import './reset.css'
 import './App.css'
 import axios from 'axios'
 
@@ -30,8 +31,8 @@ export default class App extends Component {
  render() {
       return (
         <div>
-          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory} />
           <Header/>
+          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory} />
           <Form getInventory= {this.getInventory} />
         
         </div>

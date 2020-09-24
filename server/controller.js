@@ -3,6 +3,10 @@ module.exports = {
         const db = req.app.get('db')
         // const {name, price, imgurl} = req.body
 
+        /*app.get(/'test', (req, res) => {
+            console.log('THIS IS A TEST')
+            res.send('You did it')*/
+
         db.get_inventory()
         .then((products) => res.status(200).send(products))
         .catch((err) => {

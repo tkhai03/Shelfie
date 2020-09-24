@@ -20,5 +20,12 @@ module.exports = {
 
         db.create_product(name, price, imgurl)
         .then((products) => res.status(200).send(products))
+    },
+    deleteProduct: (req, res) => {
+        const db = req.app.get('db')
+        const {id} = req.params
+
+        db.delete_product()
+        .then(() => res.status(200))
     }
 }

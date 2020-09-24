@@ -22,3 +22,4 @@ const app = express()
 
   app.get('/api/inventory', ctrl.getInventory)
   app.post('/api/product', ctrl.newProduct)
+  app.delete('/api/inventory/:id', ctrl.deleteProduct)

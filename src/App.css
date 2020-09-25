@@ -45,3 +45,43 @@
 .form-button:hover{
   background-color: black;
 }
+
+.product-box{
+  height:30vh;
+  width: 30vw;
+  background-color: #D34735;
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  margin: 100px;
+  border-radius: 10px;
+
+
+}
+
+.product-text{
+  left: 60px;
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  top: 10px;
+}
+
+.product-button{
+  background-color: #3ad886;
+  border: none;
+  border-radius: 5px;
+  font-size: large;
+}
+.button-container{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+
+}
+.product-imgurl{
+  height: 15vh;
+  width: 10vw;
+  margin: 10px;
+
+}

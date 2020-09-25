@@ -6,7 +6,7 @@ import axios from 'axios'
 
 export default function Dashboard(props) {
 
-    const deleteProduct() {
+    const deleteProduct = (id) => {
         axios.delete(`/api/inventory/${id}`)
         .then(() => {props.getInventory()})
     }
@@ -16,7 +16,7 @@ export default function Dashboard(props) {
 
             <div>
                 {props.inventory.map((product, index) => (
-                        <Product product = {product} key = {index}/>
+                        <Product setThisProduct = {props.setThisProduct} deleteProduct = {deleteProduct} product = {product} key = {index}/>
                 ))}
 
             </div>

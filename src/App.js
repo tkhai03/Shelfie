@@ -13,10 +13,19 @@ export default class App extends Component {
 
     this.state = {
       inventory: [],
+      thisProduct:{},
     }
     this.getInventory = this.getInventory.bind(this)
+    this.setThisProduct = this.setThisProduct.bind(this)
 
   }
+
+  // setThisProduct(id){
+  //   axios.get(`/api/inventory/${id}`)
+  // }
+    setThisProduct(product){
+      this.setState({thisProduct: product })
+    }
 
   componentDidMount() {
     this.getInventory()
@@ -32,8 +41,8 @@ export default class App extends Component {
       return (
         <div>
           <Header/>
-          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory} />
-          <Form getInventory= {this.getInventory} />
+          <Dashboard inventory = {this.state.inventory} getInventory= {this.getInventory} setThisProduct = {this.setThisProduct} />
+          <Form getInventory= {this.getInventory} thisProduct = {this.state.thisProduct} />
         
         </div>
       )
